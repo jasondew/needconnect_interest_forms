@@ -1,0 +1,10 @@
+%h1 NeedConnect.org interest form
+
+- form_for(@interest_form) do |f| 
+  
+  %p
+    = f.label "Email: "
+    = f.text_field :email
+
+  %p
+    = f.submit "Notify me"

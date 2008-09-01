@@ -1,0 +1,13 @@
+%h1 Report
+
+%p= "Users signed up: #{@interest_forms.length}"
+
+%h2 Interest Forms by User Agent
+%ul
+  - @interest_forms.group_by {|form| form.user_agent }.each do |(user_agent, forms)|
+    %li= "#{user_agent} => #{forms.length}"
+
+%h2 Interest Forms Emails
+%ul
+  - @interest_forms.each do |form|
+    %li= form.email
