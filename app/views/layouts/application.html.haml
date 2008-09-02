@@ -1,9 +1,16 @@
 !!!
-%html{:xmlns => "http://www.w3.org/1999/xhtml", :"xml:lang" => "en-us", :lang => "en-us"}
+%html
   %head
-    %title NeedConnect.org
-    %meta{:"http-equiv" => "Content-Type", :content => "text/html; charset=iso-8859-1"}
-
+    %title
+    = stylesheet_link_tag "application"
   %body
-    #messages= flash[:notice]
-    #content= yield
+    #wrapper
+      #header
+        .clear
+      #torso
+        = render :partial => "layouts/sidebar"
+        #content
+          = content_tag(:div, flash[:notice], :id => "notices") if flash[:notice]
+          = yield 
+        .clear
+      #footer

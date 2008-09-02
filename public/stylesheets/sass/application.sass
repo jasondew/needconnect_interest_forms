@@ -1,0 +1,382 @@
+// color variables
+!ncred = #674b4c
+!ncgreen = #4b674c
+!ncblue = #4b4c67
+!ncslate = #4b6767
+!ncdark = #15181d
+!nclight = #9f9fa7
+
+
+// default/global behavior
+*
+  :margin 0
+  :padding 0
+  :border 0
+
+a
+  :color #fff
+  :text-decoration none
+a:hover
+  :color #fc0
+
+body
+  :background url(/images/framework/bgVerticalRep.jpg) repeat-x
+  :background-color = !nclight
+  :font-family Verdana, Arial, sans-serif
+  :text-align center
+
+// IE PNG hack
+div
+  :behavior url(iepngfix.htc)
+
+
+// classes
+.clear
+  :clear both
+
+.center
+  :text-align center
+
+.bggreen
+  :background-color = !ncgreen
+.bgblue
+  :background-color = !ncblue
+.bgred
+  :background-color = !ncred
+.bgslate
+  :background-color = !ncslate
+.bgwhite
+  :background-color #fff
+
+.red
+  :color = red
+
+.wbox
+  :width 327px
+.wboxtop
+  :background url(/images/framework/leftNav/wideshadowtop.png) no-repeat
+  :height 60px
+.wboxmid
+  :background url(/images/framework/leftNav/wideshadowmiddle.png) repeat-y
+.wboxbot
+  :background url(/images/framework/leftNav/wideshadowbottom.png) no-repeat
+  :height 60px
+
+.ell
+  :width 100%
+  :color #fff
+  :font-size 0.7em
+  :position relative
+  :right -220px
+
+
+// main layout
+div#wrapper
+  :background-color = !ncdark
+  :width 955px
+  :margin 0 auto
+  :text-align left
+
+div#header
+  :padding 6px
+  :font-size 0.8em
+  :letter-spacing 0.1em
+  div#homeurl
+    :float left
+  ul#toplinks
+    :float right
+    li
+      :list-style none
+      :display inline
+      :padding-left 40px
+
+div#torso
+  :padding 0 6px
+
+div#content
+  :background url(/images/framework/inside-page-background-fill.jpg) repeat-y
+  :float left
+  :width 655px
+  :height 832px
+  a
+    :color = !ncgreen
+  a:hover
+    :text-decoration underline
+  h1
+    :color = !ncdark
+    :padding 10px 20px
+  h2
+    :padding 10px 20px
+  p
+    :padding 10px 20px
+  ul
+    :list-style none
+    :padding 5px 30px
+
+div#footer
+  :height 6px
+  :font-size 0.8em
+  ul
+    :float right
+    :padding 10px 20px 0 0
+    :list-style none
+  li
+    :display inline
+    :padding-left 40px
+
+#notices
+  :padding 15px 30px
+  :text-align center
+  :color red
+
+// front page
+div#frontpage
+  :float right
+
+div#flash
+  :background url(/images/framework/frontpage/mastHeader/initialplaceholder.jpg) no-repeat
+  :width 656px
+  :height 411px
+
+div#topneeds
+  :float left
+  .wboxmid
+    :height 301px
+* html div#topneeds
+  .wboxmid
+    :height 337px
+div#topneeds-content
+  :width 327px
+  :position absolute
+  :top 455px
+  :padding-left 15px
+  :color = !ncdark
+  :font-weight bold
+  h2
+    :color #c00
+  p
+    :color #c00
+    :padding 5px 20px 10px 5px
+    :line-height 1.4em
+  ul
+    :line-height 1.5em
+    :padding-left 5px
+    :list-style none
+    :font-size 0.8em
+
+  table
+    :width 95%
+
+    tbody
+      :font-size 12px
+
+div#featured
+  :float left
+  :padding-left 1px
+  .wboxmid
+    :height 301px
+* html div#featured
+  .wboxmid
+    :height 337px
+div#featured-content
+  :width 327px
+  :position absolute
+  :top 455px
+  :padding-left 15px
+  :color = !ncdark
+  :font-weight bold
+  h2
+    :color = !ncgreen
+    :padding-bottom 5px
+  img
+    :padding 5px 0
+  p
+    :text-align justify
+    :text-justify newspaper
+    :padding-right 25px
+    :font-size 0.9em
+    :line-height 1.5em
+  ul
+    :padding 10px 0 10px 30px
+    :font-size 0.9em
+  li
+    :list-style-image url(/images/framework/frontpage/contentArea/bulletpurple.png)
+
+// login form
+div#login_form
+  :padding 5px
+  :margin 0 auto
+  :background white
+  :width 300px
+  label, input#login_button
+    :font-weight bold
+    :padding-bottom 5px
+  input#login_button
+    :margin-top 5px
+    :font-size 0.9em
+  input
+    :border 1px solid black
+  p
+    :padding 5px
+
+// portal
+div#actions
+  :padding 20px
+  :float left
+  ul
+    :border 1px solid #000
+  ul li
+    :list-style none
+    :font-size 1.3em
+  li
+    :height 32px
+    :margin 5px
+    :padding-left 60px
+    :padding-top 5px
+  li#add
+    :background url(/images/framework/portal/edit_add.png) no-repeat
+  li#needs
+    :background url(/images/framework/portal/edit.png) no-repeat
+  li#access
+    :background url(/images/framework/portal/encrypted.png) no-repeat
+  li#notifications
+    :background url(/images/framework/portal/mail_generic.png) no-repeat
+  li#account
+    :background url(/images/framework/portal/configure_shortcuts.png) no-repeat
+
+div#stats
+  :padding-top 20px
+  :float left
+  ul
+    :border 1px solid #000
+    :padding 10px
+    :height 195px
+  ul li
+    :list-style none
+    :font-size 1.0em
+    :line-height 1.5em
+  span.left
+    :float left
+  span.right
+    :float right
+
+div#needs
+  :padding 20px
+  table
+    :border 1px solid #000
+    :width 100%
+    :padding 10px
+  th
+    :color = !ncblue
+
+div.50
+  :float left
+  :width 50%
+
+span.title
+  :font-size 1.5em
+
+div#pag
+  :float right
+  :padding-right 20px
+
+input
+  :border 1px solid #000
+
+.box
+  :width 287px
+.boxtop
+  :background url(/images/framework/leftNav/shadowtop.png) no-repeat
+  :height 60px
+.boxmid
+  :background url(/images/framework/leftNav/shadowmiddle.png) repeat-y
+.boxbot
+  :background url(/images/framework/leftNav/shadowbottom.png) no-repeat
+  :height 60px
+
+div#sidebar
+  :float left
+  :width 287px
+  h3
+    :color #fff
+    :font-size 0.8em
+
+#logo
+  :display block
+  :border none
+  :width 287px
+  :height 147px
+
+// navlinks
+div#navlinks
+  .boxmid
+    :height 120px
+div#navlinks-content
+  :position absolute
+  :top 200px
+  :padding-left 13px
+  span
+    :display block
+  ul
+    :width 261px
+    :list-style none
+    :font-weight bold
+    :font-size 1.2em
+  li
+    :padding 0 0 5px 20px
+    :border-bottom 1px solid #3c3c3c
+  li.last
+    :border none
+  li:hover, li.selected
+    :background url(/images/framework/leftNav/menuselected.png) no-repeat
+    a
+      :color white
+
+// categories
+div#categories-content
+  :position absolute
+  :top 430px
+  :padding-left 35px
+
+  ul
+    :list-style none
+    :font-size 0.7em
+  ul.left
+    :float left
+    :padding-right 15px
+  ul.right
+    :float left
+
+// charities
+div#charities-content
+  :position absolute
+  :top 550px
+* html div#charities-content
+  :position absolute
+  :top 570px
+div#charities-content
+  :padding-left 35px
+  ul
+    :list-style none
+    :font-size 0.7em
+    :line-height 1.1em
+
+// success
+div#success
+  .boxmid
+    :height 85px
+div#success-content
+  :position absolute
+  :top 670px
+* html div#success-content
+  :position absolute
+  :top 700px
+div#success-content
+  :padding-left 35px
+  p
+    :color #fff
+    :font-size 0.7em
+    :width 217px
+    :padding-bottom 1em
+
+
