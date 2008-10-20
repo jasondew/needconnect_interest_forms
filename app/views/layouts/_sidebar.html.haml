@@ -1,2 +1,17 @@
 #sidebar
   = link_to image_tag("framework/needconnectLogo.jpg"), root_path, :id => "logo"
+  
+  #form
+    %h2 Notify Me!
+    %p You’re obviously here because you’ve heard about what we’re doing. You may even want to help out a charity or two. You might even be a charity looking for help.
+    %p Either way, this section is for you. All you need to do is give us your email address, and we’ll let you know when the website is ready for launch.
+    %p Your information stays with us and not shared with anyone.
+    
+    - form_for(@interest_form) do |f| 
+      
+      %p
+        = f.label "Your email"
+        = f.text_field :email
+    
+      %p
+        = f.submit "Sign up to be informed", :id => "submit"

@@ -22,7 +22,7 @@ a:hover
 body
   :background url(/images/framework/bgVerticalRep.jpg) repeat-x
   :background-color = !nclight
-  :font-family Verdana, Arial, sans-serif
+  :font-family "Segoe UI", Arial, sans-serif
   :text-align center
 
 // IE PNG hack
@@ -104,7 +104,8 @@ div#content
     :text-decoration underline
   h1
     :color = !ncdark
-    :padding 10px 20px
+    :padding 10px
+    :margin 20px 0 0 0 
   h2
     :padding 10px 20px
   p
@@ -380,3 +381,25 @@ div#success-content
     :padding-bottom 1em
 
 
+
+#form
+  :background-color= !ncgreen
+  :color white
+
+  h2
+    :padding 22px 0 0 22px
+
+  p
+    :margin 10px 20px
+
+  input
+    :padding 4px
+
+  #submit
+    :background url("/images/framework/orange-button-long.png")
+    :border none
+    :width 206px
+    :height 23px
+    :margin 6px 3px
+    :color white
+    :font-size 15px

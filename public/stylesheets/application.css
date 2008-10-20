@@ -13,7 +13,7 @@ a:hover {
 body {
   background: url(/images/framework/bgVerticalRep.jpg) repeat-x;
   background-color: #9f9fa7;
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   text-align: center; }
 
 div {
@@ -97,7 +97,8 @@ div#content {
     text-decoration: underline; }
   div#content h1 {
     color: #15181d;
-    padding: 10px 20px; }
+    padding: 10px;
+    margin: 20px 0 0 0; }
   div#content h2 {
     padding: 10px 20px; }
   div#content p {
@@ -370,3 +371,21 @@ div#success-content {
     font-size: 0.7em;
     width: 217px;
     padding-bottom: 1em; }
+
+#form {
+  background-color: #4b674c;
+  color: white; }
+  #form h2 {
+    padding: 22px 0 0 22px; }
+  #form p {
+    margin: 10px 20px; }
+  #form input {
+    padding: 4px; }
+  #form #submit {
+    background: url("/images/framework/orange-button-long.png");
+    border: none;
+    width: 206px;
+    height: 23px;
+    margin: 6px 3px;
+    color: white;
+    font-size: 15px; }
